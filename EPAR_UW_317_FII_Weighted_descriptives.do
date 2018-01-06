@@ -11,6 +11,30 @@
 *Date			: 5 December 2017
 ----------------------------------------------------------------------------------------------------------------------------------------------------*/
 
+*TABLE OF CONTENTS
+*----------
+*1. File description
+*2. Appending of individual country wave 3 .dta files
+*3. Generating and renaming of variables
+*5. Demographics
+	//a. Sample subpopulation code
+	//b. Descriptives
+	//bc. Chi-squared tests
+*6. Chi-squared tests of demographics
+*7. Weighted descriptives, awareness
+	//a. Proportions
+	//b. Counts
+*8. Weighted descriptives, adoption
+	//a. Proportions
+	//b. Counts
+*9. Weighted descriptives, use
+	//a. Proportions
+	//b. Counts
+*10. Descriptive stastics for females only
+	//a. Descriptives
+	//b. Chi-squared tests
+*11. Weighted frequency of use by country
+
 
 *Data source
 *-----------
@@ -155,15 +179,20 @@ save "$output\W3_Master.dta"
 **DEMOGRAPHICS**
 ****************
 
+svyset [pweight=weight]
+
 **********************
 *CHOOSE SUBPOPULATION*
 **********************
 
 *FEMALES ONLY
-*keep if female==1
+*change "svy:" to "svy, subpop(if female==1):"
+*if already subpop command, change "svy, subpop([subpop1]):" where [subpop1] is any subpop to "svy, subpop(if [subpop1==1] & female==1):"
 
 *MALES ONLY
-*keep if female==0
+*change "svy:" to "svy, subpop(if female==0):"
+*if already subpop command, change "svy, subpop([subpop1]):" where [subpop1] is any subpop to "svy, subpop(if [subpop1==1] & female==0):"
+
 
 **own phone but no sim and have access to sim
 svy, subpop(if phone_nosim==1): proportion sim_access,over(country)

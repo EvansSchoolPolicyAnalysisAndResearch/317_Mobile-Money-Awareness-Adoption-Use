@@ -20,7 +20,7 @@
 *Summary of Executing the Master do.file
 *-----------
 *This Master do.file constructs selected sociodemogaphic and mobile money uptake outcome variables from the Bangladesh Financial Inclusion Insights Wave 2 data set.
-*After downloading the "FSP_Final_Bangladesh_W2_10312015(public).xlsx" data file from Intermedia, we convert it to Stata .dta format for analysis. 
+*After downloading the "FSP_Final_Bangladesh_W3 (public).xlsx" data file from Intermedia, we convert it to Stata .dta format for analysis. 
 *The do.file first creates sociodemogaphic variables and then outcome variables related to mobile money uptake.
 *We then save a clean .dta file at the end, which we merge with other .dta files from other FII countries and waves for analysis in a separate .do file.
 

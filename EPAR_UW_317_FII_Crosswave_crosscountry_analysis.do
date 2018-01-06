@@ -10,6 +10,22 @@
 *Date			: 5 December 2017
 ----------------------------------------------------------------------------------------------------------------------------------------------------*/
 
+*TABLE OF CONTENTS
+*----------
+*1. File description
+*2. Appending of individual country and wave .dta files
+*3. List of variables for analysis
+*4. Generating and renaming of variables
+*5. Regression anaylsis
+	//a. Pooled Countries
+	//b. All countries, dummies
+	//c. Individual Country- general awareness, specific awareness, adoption, & use
+*6. Final awareness, adoption, use (multi-wave)
+	//a. All wave regression - specific awareness, general awareness, adoption ,use
+	//b. Coutnry specific regressions - awareness, adoption, use
+	
+
+
 
 *Data source
 *-----------
@@ -162,7 +178,7 @@ keep $vars
 ************************
 
 svyset [pweight=weight] //This is the default survey weight provided by the FII team - this gets called when running svy: regress - not other regression commands
-**Note on svyset: reg outcomevar rhsvars [pweight=weight], cluster(AA2) // This is the code suggested by Katie if we want to cluster at the district level at individual regressions. We do not have the PSU variable
+**Note on svyset: reg outcomevar rhsvars [pweight=weight], cluster(AA2) // This is the suggested code suggested if you want to cluster at the district level at individual regressions. We do not have the PSU variable
 
 ************************************************
 ** GENERATE/LABEL/RENAME ADDITIONAL VARIABLES **

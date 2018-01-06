@@ -26,7 +26,7 @@
 
 
 set excelxlsxlargefile on
-import excel using "filepath for location where you downloaded raw data\Pakistan Wave 3FSP_Final_Pakistan_W3 (public).xlsx", firstrow clear
+import excel using "filepath for location where you downloaded raw data\FSP_Final_Pakistan_W3 (public).xlsx", firstrow clear
 save "filepath for location where you want to save dta file/Pakistan_Wave3_Stata.dta", replace
 clear
 
