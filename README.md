@@ -10,4 +10,4 @@ We also include one .do file which conducts cross-wave and cross-country regress
 
 The .do files include notes on how to run the files, including accessing the raw data and updating the global macros to specify the locations where files will be saved. After making these changes, the .do files can be run in their entirety to replicate our analyses, or modified to conduct new analyses. To access the .do files, either clone this repository or click on the green "Clone or Download" button and choose "Download zip". 
 
-If you use or modify our code, please cite us using the provided citation.
+If you use or modify our code, please cite us using the provided citation. [![DOI](https://zenodo.org/badge/113602163.svg)](https://zenodo.org/badge/latestdoi/113602163)
